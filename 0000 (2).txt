@@ -1,0 +1,7 @@
+eefe
+// 創建超連結到 "33333.html"
+            var downloadLink = '33333.html';
+            var a = document.createElement('a');
+            a.href = downloadLink;
+            a.download = fileName + '.html';
+            a.click();

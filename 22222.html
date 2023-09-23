@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>測驗說明</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .banner {
+            text-align: center;
+            background-image: url('未命名設計 (13).png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 200px 0;
+            font-family: '新蒂香草體', cursive;
+            font-size: 150px;
+            color: #000000;
+        }
+
+        .welcome-section {
+            background-image: url('未命名設計 (11).png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            font-family: '新蒂香草體', cursive;
+            font-size: 36px;
+            color: #000000;
+            word-wrap: break-word;
+            white-space: pre-line;
+            line-height: 1.5;
+        }
+
+        /* 样式文本输入框和按钮 */
+        .input-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 24px;
+            width: 300px;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        測驗說明
+    </div>
+    <div class="welcome-section">
+        歡迎您來做我們茹義學小測驗，
+
+        此測驗是參照MBTI測驗設計，
+
+        接下來的問題皆為選擇題，
+
+        結束之後會告訴您是屬於哪種類型的人，
+
+        也會有興趣、科系及職業參考，
+
+        希望大家能在這裡找到適合自己的「茹義學」。
+    </div>
+  <!-- 新增文字輸入框和確認按鈕 -->
+    <div class="input-container">
+        <label for="nameInput">請輸入您的名字：</label>
+        <input type="text" id="nameInput">
+        <input type="button" value="開始測驗" onclick="startTest()">
+    </div>
+
+  <script>
+    function startTest() {
+        var name = document.getElementById('nameInput').value;
+        var fileName = generateFileName();
+
+        // 将名字作为参数添加到跳转链接
+        var nextPageLink = '33333.html?Name=' + encodeURIComponent(name);
+
+        // 设置当前窗口的位置到下一个页面
+        window.location.href = nextPageLink;
+    }
+
+        var fileNumber = 0;
+        function generateFileName() {
+            var fileName = fileNumber.toString().padStart(4, '0');
+            fileNumber++;
+            return fileName;
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>第一題</title>
+   
+    <script>
+        var name; // 用于存储前一页传递的名字参数
+        // 获取前一页传递的参数
+        const urlParams = new URLSearchParams(window.location.search);
+        name = urlParams.get('Name');
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('未命名設計 (10).png'); /* 替換為您的背景圖片URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: '新蒂香草體', cursive;
+            text-align: center;
+            color: #000000; /* 內文顏色為黑色 */
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 48px; /* 標題大小為48px */
+            color: #000000; /* 標題顏色為黑色 */
+        }
+
+        p {
+            font-size: 36px; /* 內文大小為36px */
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center; /* 按鈕置中 */
+        }
+
+        .button {
+            display: block;
+            margin: 10px 0; /* 上下各留出10px的空間 */
+            padding: 10px 0;
+            width: 600px; /* 按鈕寬度設為600px */
+            font-size: 24px;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 auto; /* 水平置中 */
+        }
+
+        /* 新增样式用于显示名字和问候 */
+        .greeting {
+            font-size: 22px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #000000; /* 字体颜色为黑色 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 显示名字和问候 -->
+    <div class="greeting">
+        <!-- 将名字和问候组合成字符串显示 -->
+        <script>
+            if (name) {
+                document.write(name + "，您好。");
+            }
+        </script>
+    </div>
+
+    <div class="container">
+        <h1>第一題</h1>
+        <p>請問您時常從誰的身上獲取自信或能量。</p>
+        <div class="buttons">
+            <a class="button" href="#" onclick="selectOption('E')">1.其他人，如家人、朋友、同事</a>
+            <br> <!-- 新增一行空間 -->
+            <a class="button" href="#" onclick="selectOption('I')">2.自己</a>
+        </div>
+    </div>
+</body>
+</html>
